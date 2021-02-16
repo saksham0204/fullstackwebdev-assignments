@@ -28,6 +28,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th>Id</th>
                             <th>Username</th>
                             <th>Email</th>
                             <th>Gender</th>
@@ -37,6 +38,7 @@
                     <tbody>
                         <?php while (($row = mysqli_fetch_assoc($result))) { ?>
                             <tr>
+                                <td><?php echo $row["id"] ?></td>
                                 <td><?php echo $row["username"] ?></td>
                                 <td><?php echo $row["email"] ?></td>
                                 <td><?php echo $row["gender"] ?></td>
