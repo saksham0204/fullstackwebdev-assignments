@@ -1,0 +1,19 @@
+  
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Links</title>
+
+        <script>
+            function getAllLinks(){
+                var arr = [], l = document.links;
+                for(var i=0; i<l.length; i++) {
+                    arr.push(l[i].href);
+                }
+                return arr;
+            }
+            console.log(getAllLinks());
+        </script>
+    </head>
+</html>
