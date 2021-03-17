@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Random Image</title>
+
+        <style>
+            body {
+                margin: 30px;
+                padding: auto;
+            }
+        </style>
+
+        <script>
+            var flag = 0;
+            function getRandomImage() {
+                var imagesArray = ["CS_GO.jpg", "FAU-G.jpg", "PUBG.jpg", "nfs.png", "tekken7.jpg", "pubg1.jpg"];
+                var bulbArray = ["bulb_off.png", "bulb_on.png"];
+                var num = Math.floor(Math.random() * (imagesArray.length));
+                if(flag == 1)
+                    flag = 0;
+                else
+                    flag = 1;
+                document.canvas.src = imagesArray[num];
+                document.bulb.src = bulbArray[flag];
+            }
+        </script>
+    </head>
+    <body onload="getRandomImage();">
+        <table>
+            <tr><td> <img name="canvas" width="800px" height="500px"><br><br></td> <td> <img name="bulb" width="800px" height="500px"></td></tr>
+            
+        </table>
+       
+        <button onclick="getRandomImage();">Click Me</button><br><br>
+        
+    </body>
+</html>
