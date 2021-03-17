@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Random Colors</title>
+
+        <style>
+            body {
+                margin: 30px;
+                padding: auto;
+            }
+
+            div {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background-color:#000000;
+                margin-left: 35%;
+            }
+        </style>
+
+        <script>
+            function getRandomColor() {
+                ele = document.getElementById("circle");
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                ele.style.backgroundColor =  color;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="circle" name="circle"></div><br><br>
+        <button onclick="getRandomColor();" align="centre">Click Me</button>
+    </body>
+</html>
